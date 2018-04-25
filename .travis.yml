@@ -1,0 +1,34 @@
+language: go
+go:
+  - "1.10"
+  - "1.9"
+  - "1.8"
+
+cache:
+  directories:
+    - ${HOME}/source
+
+before_install:
+  - pushd ${HOME}/source
+  - if [[ ! -d "./glide-v0.12.3" ]]; then
+        wget https://github.com/Masterminds/glide/releases/download/v0.12.3/glide-v0.12.3-linux-amd64.tar.gz &&
+        tar -vxzf glide-v0.12.3-linux-amd64.tar.gz &&
+        mv linux-amd64 glide-v0.12.3;
+    fi
+  - export PATH=${HOME}/source/glide-v0.12.3:$PATH
+  - popd
+  - make --version
+  - glide --version
+
+install:
+  - go get -u github.com/golang/lint/golint
+  - glide install
+
+script:
+  - make check
+  - make build
+  - make clean
+  - make test
+  - make install
+  - make uninstall
+  - make release
