@@ -4,7 +4,7 @@ Handy tools for Docker.
 
 ## What's Inside
 
-Currently, this project contains a command-line tool called `docker-tools`. 
+Currently, this project contains a command-line tool called `docker-tools`.
 
 And some useful scripts will be provided later on.
 
@@ -39,9 +39,9 @@ Usage:
   docker-tools [command]
 
 Available Commands:
-  help         Help about any command
+  help          Help about any command
   remote-import Import docker image from one registry to another
-  remote-build Build docker image and push to specified registry
+  remote-build  Build docker image and push to specified registry
 
 Flags:
   -c, --config string   Configuration file (default is ${HOME}/.docker-tools.yaml)
@@ -126,7 +126,7 @@ Dockerfile
 ...
 Executing: mkdir -p /builds
 Executing: /usr/bin/scp [scp -P 22 /var/folders/ln/98ndp7416gx5v3mn7gv78ntm0000gn/T/1524649721-943271212 root@127.0.0.1:/builds/1524649721-943271212.tar.gz]
-1524649721-943271212                                                                          100%   13MB   7.4MB/s   00:01    
+1524649721-943271212                                                                          100%   13MB   7.4MB/s   00:01
 Executing: mkdir -p /builds/1524649721-943271212
 Executing: cd /builds/1524649721-943271212
 Executing: tar -xf /builds/1524649721-943271212.tar.gz
@@ -145,10 +145,10 @@ Step 2/11 : COPY . /data/go/src/example.com/test
 Successfully built 2e762bf4e128
 Successfully tagged registry.example.com/service/test:e8b54fa
 The push refers to repository [registry.example.com/service/test]
-604d8539a0d8: Layer already exists 
-ff8f9e6fab20: Layer already exists 
-a4c0a34c75f3: Layer already exists 
-9dfa40a0da3b: Layer already exists 
+604d8539a0d8: Layer already exists
+ff8f9e6fab20: Layer already exists
+a4c0a34c75f3: Layer already exists
+9dfa40a0da3b: Layer already exists
 e8b54fa: digest: sha256:f51282c918fdb52e9ba5862f383d328ce559d03a1415611660623505f93e2893 size: 1157
 ```
 
@@ -180,21 +180,21 @@ Executing: docker tag docker.io/redis:4.0.2 registry.example.com/docker.io/redis
 Executing: docker push registry.example.com/docker.io/redis:4.0.2
 Executing: docker rmi docker.io/redis:4.0.2 registry.example.com/docker.io/redis:4.0.2
 4.0.2: Pulling from library/redis
-d13d02fa248d: Pull complete 
-039f8341839e: Pull complete 
-21b9cdda7eb9: Pull complete 
-c3eba3e5fbc2: Pull complete 
-7778a0753f87: Pull complete 
-b052cf77de81: Pull complete 
+d13d02fa248d: Pull complete
+039f8341839e: Pull complete
+21b9cdda7eb9: Pull complete
+c3eba3e5fbc2: Pull complete
+7778a0753f87: Pull complete
+b052cf77de81: Pull complete
 Digest: sha256:cd277716dbff2c0211c8366687d275d2b53112fecbf9d6c86e9853edb0900956
 Status: Downloaded newer image for redis:4.0.2
 The push refers to repository [registry.example.com/docker.io/redis]
-4aa04ab0fe76: Layer already exists 
-967b580842df: Layer already exists 
-22fc1222979f: Layer already exists 
-9503917b6420: Layer already exists 
-aa84bbcc6553: Layer already exists 
-29d71372a492: Layer already exists 
+4aa04ab0fe76: Layer already exists
+967b580842df: Layer already exists
+22fc1222979f: Layer already exists
+9503917b6420: Layer already exists
+aa84bbcc6553: Layer already exists
+29d71372a492: Layer already exists
 4.0.2: digest: sha256:3c07847e5aa6911cf5d9441642769d3b6cd0bf6b8576773ae3a0742056b9dd47 size: 1571
 Untagged: redis:4.0.2
 Untagged: redis@sha256:cd277716dbff2c0211c8366687d275d2b53112fecbf9d6c86e9853edb0900956
