@@ -1,5 +1,9 @@
 # docker-tools
 
+[![Build Status](https://travis-ci.org/pengsrc/docker-tools.svg?branch=master)](https://travis-ci.org/pengsrc/docker-tools)
+[![Go Report Card](https://goreportcard.com/badge/github.com/pengsrc/docker-tools)](https://goreportcard.com/report/github.com/pengsrc/docker-tools)
+[![License](http://img.shields.io/badge/license-apache%20v2-blue.svg)](https://github.com/pengsrc/docker-tools/blob/master/LICENSE)
+
 Handy tools for Docker.
 
 ## What's Inside
