@@ -1,0 +1,10 @@
+# Configuration example for docker-tools
+# than should be placed at "~/.docker-tools.yaml".
+
+# Host to remote build & import images.
+builder:
+  host: 127.0.0.1
+  port: 22
+
+# Docker registry to push built images and imported images.
+registry: registry.example.com
